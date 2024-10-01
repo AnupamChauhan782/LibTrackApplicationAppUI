@@ -1,0 +1,30 @@
+<!-- 
+id: number,
+name: string,
+category: string,
+rentPerDay: number -->
+
+<div class="container">
+    <div class="form-container">
+        <h2>Add New Books</h2>
+        <form id="contactForm" [formGroup]="createBookForm" (ngSubmit)="saveBook()">
+            <div class="form-floating mb-3 position-relative d-flex align-items-center">
+               
+                <input type="text" class="form-control" id="name" formControlName="bookName" placeholder="Your Name..."  required>
+                <label for="name">BookName</label>
+            </div>
+            <div class="form-floating mb-3 position-relative d-flex align-items-center">
+              
+                <input type="text" class="form-control" formControlName="categories"  placeholder="categoryData.." required>
+                <label for="email">Category</label>
+            </div>
+            <div class="form-floating mb-3 position-relative d-flex align-items-center">
+              
+                <input type="text" class="form-control"  formControlName="rentPerDays"  placeholder="rent..." required>
+                <label for="email">RentPerDays</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100 py-3">Save Book <i class="bi bi-plus-fill"></i></button>
+        </form>
+    </div>
+</div>

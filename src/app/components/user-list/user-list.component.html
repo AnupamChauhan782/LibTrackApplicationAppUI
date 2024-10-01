@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">User Directory</h5>
+            <a class="btn btn-success" id="addUserButton" routerLink="/users">Add User <i class="bi bi-plus-circle-dotted"></i></a>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 position-relative">
+             
+                <input type="text" id="searchInput" class="form-control search-input" [(ngModel)]="searchTerm"   placeholder="Search users...">
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <tr *ngFor="let item of userLis | filter:searchTerm:'user'">
+                            <td>{{item.user_Name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>
+                                <i class="bi bi-trash3 me-3" (click)="deleteUser(item.userId)" style="color: red;"></i>
+                                <i class="bi bi-pencil-square " (click)="updateUser(item)" style="color: darkgreen;"></i>
+                            </td>
+                        </tr>
+                        <!-- Add more user rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

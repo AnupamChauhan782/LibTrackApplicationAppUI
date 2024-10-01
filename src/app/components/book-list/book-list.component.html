@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Book Directory</h5>
+            <a class="btn btn-success" id="addUserButton" routerLink="/book">Add NewBook <i class="bi bi-plus-circle-dotted"></i></a>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 position-relative">
+             
+                <input type="text" id="searchInput" class="form-control search-input"  [(ngModel)]="searchTerm" placeholder="Search books By Criteria...">
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th> BookName</th>
+                            <th>Category</th>
+                            <th>RentPerDay</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <tr *ngFor="let item of bookList |filter:searchTerm:'book'">
+                            <td>{{item.name}}</td>
+                            <td>{{item.category}}</td>
+                            <td>{{item.rentPerDay}}</td>
+                           
+                        </tr>
+                        <!-- Add more user rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+.container {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #4a69bd;
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 20px;
+}
+
+.card-header .btn {
+    border-radius: 20px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #4a69bd;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.search-input {
+    border-radius: 25px; /* More rounded corners */
+    padding-left: 40px;
+    padding-right: 40px; /* Add padding for better spacing */
+    border: 1px solid #ced4da; /* Border styling */
+    transition: border 0.3s; /* Smooth border transition */
+}
+
+.search-input:focus {
+    border-color: #4a69bd; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(74, 105, 189, 0.5); /* Add shadow on focus */
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    color: #6c757d;
+}
+
+.table-responsive {
+    border-radius: 0 0 15px 15px;
+}
+
+.highlight {
+    background-color: #fff3cd;
+}

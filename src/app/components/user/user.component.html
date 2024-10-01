@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="form-container">
+        <h2>Add New UserDetails</h2>
+        <form id="contactForm" [formGroup]="creation" (ngSubmit)="create()">
+            <div class="form-floating mb-3 position-relative d-flex align-items-center">
+                <i class="bi bi-people-fill floating-icon"></i>
+                <input type="text" class="form-control" id="name" placeholder="Your Name..." formControlName="userName" required>
+                <label for="name">User</label>
+            </div>
+            <div class="form-floating mb-3 position-relative d-flex align-items-center">
+                <i class="bi bi-envelope-open floating-icon"></i>
+                <input type="email" class="form-control" id="email" formControlName="emailId" placeholder="name@example.com" required>
+                <label for="email">Email</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100 py-3">Save User <i class="bi bi-person-plus-fill"></i></button>
+        </form>
+    </div>
+</div>
